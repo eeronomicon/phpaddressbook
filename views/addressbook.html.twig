@@ -30,17 +30,18 @@
         <form action="/create_contact" method="post">
             <div class="form-group">
                 <label for="input_name">Name</label>
-                <input class="form-control" type="text" name="input_name" id="input_name" required placeholder="Name of Contact">
+                <input class="form-control contact_input" type="text" name="input_name" id="input_name" required placeholder="Name of Contact">
             </div>
             <div class="form-group">
                 <label for="input_address">Address</label>
-                <input class="form-control" type="text" name="input_address" id="input_address" required placeholder="Contact Address">
+                <input class="form-control contact_input" type="text" name="input_address" id="input_address" required placeholder="Contact Address">
             </div>
             <div class="form-group">
                 <label for="input_phone">Phone</label>
-                <input class="form-control" type="text" name="input_phone" id="input_phone" required placeholder="Contact Phone Number">
+                <input class="form-control contact_input" type="text" name="input_phone" id="input_phone" required placeholder="Contact Phone Number">
             </div>
             <button class="btn btn-info">Create Contact</button>
+            <button class="btn btn-warning" id="input-clear">Clear Form</button>
         </form>
         <h3>Clear Contact List</h3>
             <p>Click the button below to clear your Contact List. There is no undo, so be warned!</p>
