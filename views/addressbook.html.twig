@@ -11,9 +11,17 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h2>My Contacts</h2>
-      </div>
+        <div class="jumbotron">
+            <h2>Addressbook</h2>
+        </div>
+            <h3>My Contacts</h3>
+            {% if my_contacts is not empty %}
+                <ul class="list-group">
+
+                </ul>
+            {% else %}
+                <h4>Your Contacts list is empty. Please create a Contact using the form below.</h4>
+            {% endif %}
     </div>
   </body>
 </html>

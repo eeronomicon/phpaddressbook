@@ -5,8 +5,8 @@
 
     session_start();
 
-    if (empty($_SESSION['pet_record'])) {
-        $_SESSION['pet_record'] = "";
+    if (empty($_SESSION['list_of_contacts'])) {
+        $_SESSION['list_of_contacts'] = array();
     }
 
     $app = new Silex\Application();
@@ -16,7 +16,7 @@
     ));
 
     $app->get("/", function() use ($app) {
-        return $app['twig']->render('addressbook.html.twig');
+        return $app['twig']->render('addressbook.html.twig', array('my_contacts'=>$_SESSION['list_of_contacts']));
     });
 
 
