@@ -14,14 +14,34 @@
         <div class="jumbotron">
             <h2>Addressbook</h2>
         </div>
-            <h3>My Contacts</h3>
-            {% if my_contacts is not empty %}
-                <ul class="list-group">
-
-                </ul>
-            {% else %}
-                <h4>Your Contacts list is empty. Please create a Contact using the form below.</h4>
-            {% endif %}
+        <h3>My Contacts</h3>
+        {% if my_contacts is not empty %}
+            <ul class="list-group">
+                <li class="list-group-item active">Name / Address / Phone</li>
+                {% for contact in my_contacts %}
+                    <li class="list-group-item">{{ contact.getContactInfo(1) }} /  {{ contact.getContactInfo(2) }} / {{ contact.getContactInfo(3) }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <h4>Your Contacts list is empty. Please create a Contact using the form below.</h4>
+        {% endif %}
+        <br>
+        <h3>Add a New Contact</h3>
+        <form action="create_contact" method="post">
+            <div class="form-group">
+                <label for="input_name">Name</label>
+                <input class="form-control" type="text" name="input_name" id="input_name" required placeholder="Name of Contact">
+            </div>
+            <div class="form-group">
+                <label for="input_address">Address</label>
+                <input class="form-control" type="text" name="input_address" id="input_address" required placeholder="Contact Address">
+            </div>
+            <div class="form-group">
+                <label for="input_phone">Phone</label>
+                <input class="form-control" type="text" name="input_phone" id="input_phone" required placeholder="Contact Phone Number">
+            </div>
+            <button class="btn btn-info">Create Contact</button>
+        </form>
     </div>
   </body>
 </html>

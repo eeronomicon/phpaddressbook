@@ -13,6 +13,11 @@
             $this->contactPhone = $phone;
         }
 
+        function saveContact()
+        {
+            array_push($_SESSION['list_of_contacts'], $this);
+        }
+
         function getContactInfo($attributeNumber)
         {
             if ($attributeNumber == 1) {
