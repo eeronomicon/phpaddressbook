@@ -1,7 +1,11 @@
 h2 > img {
-  max-height: 40px;
-  vertical-align: middle;
+  max-height: 36px;
+  vertical-align: bottom;
 }
 .contactList {
   padding-bottom: 60px;
+}
+.jumbotron {
+  margin-top: 30px;
+  background-color: #ffdc00;
 }
