@@ -6,19 +6,22 @@
 
 ## Description
 
-This application stores and lists contacts.
+This application stores, lists, and clears a list of Contacts.
 
 ## Setup/Installation Requirements
 
-*
+* Clone or download/unzip the repository
+* Run Composer Install to include all dependencies
+* Start the PHP server at the /web directory of the project
+* Open a browser session at your PHP server's root
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+There are no known bugs with this application.
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+Contact me via GitHub!
 
 ## Technologies Used
 
