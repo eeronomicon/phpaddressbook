@@ -40,5 +40,14 @@
             }
         }
 
+        static function getAll()
+        {
+            return $_SESSION['list_of_contacts'];
+        }
+
+        static function deleteAll()
+        {
+            $_SESSION['list_of_contacts'] = array();
+        }
     }
 ?>

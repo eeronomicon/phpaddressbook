@@ -10,7 +10,7 @@
     <title>Addressbook</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container contactList">
         <div class="jumbotron">
             <h2>Addressbook</h2>
         </div>
@@ -27,7 +27,7 @@
         {% endif %}
         <br>
         <h3>Add a New Contact</h3>
-        <form action="create_contact" method="post">
+        <form action="/create_contact" method="post">
             <div class="form-group">
                 <label for="input_name">Name</label>
                 <input class="form-control" type="text" name="input_name" id="input_name" required placeholder="Name of Contact">
@@ -42,6 +42,11 @@
             </div>
             <button class="btn btn-info">Create Contact</button>
         </form>
+        <h3>Clear Contact List</h3>
+            <p>Click the button below to clear your Contact List. There is no undo, so be warned!</p>
+            <form action="/delete_contacts" method="post">
+                <button class="btn btn-danger">Delete All Contacts</button>
+            </form>
     </div>
   </body>
 </html>
